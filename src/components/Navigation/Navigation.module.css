@@ -1,0 +1,8 @@
+.itemLink{
+    display: flex;
+    font-size: medium;
+    font-weight: 500;
+    margin-top: 25px;
+    text-decoration: none;
+    margin-left: 50px;
+}
