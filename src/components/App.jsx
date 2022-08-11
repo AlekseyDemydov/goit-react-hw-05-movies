@@ -3,12 +3,20 @@ import AppBar from '../AppBar/AppBar';
 import Component from './Component/Component';
 import Home from './Home/Home';
 
+import MovieDet from './MovieDet/MovieDet';
+import Cast from './Cast/Cast';
+import Reviews from './Review/Review';
+
 export const App = () => {
   return (
     <Component>
       <AppBar />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="movies/movieId" element={<MovieDet />}>
+          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
+        </Route>
       </Routes>
     </Component>
   );
