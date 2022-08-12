@@ -14,14 +14,12 @@ import Component from '../Component/Component';
 
 const MovieDet = () => {
   const [data, setData] = useState({});
-
   const { movieId } = useParams();
   const locRef = useRef(null);
   const location = useLocation();
-
   useEffect(() => {
-    locRef.current = location.state?.from ?? '/';
     const dataConversion = obj => {
+      locRef.current = location.state?.from ?? '/';
       const genres = obj.genres.map(genre => genre.name).join(', ');
       const year = obj['release_date'].split('-')[0];
       const score = Math.ceil(obj['vote_average'] * 10);
