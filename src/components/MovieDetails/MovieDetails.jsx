@@ -12,7 +12,7 @@ import api from '../../api/api';
 import DetailsMovie from '../DetailsMovie/DetailsMovie';
 import Component from '../Component/Component';
 
-const MovieDet = () => {
+const MovieDetails = () => {
   const locRef = useRef(null);
   const location = useLocation();
   locRef.current = location.state?.from ?? '/';
@@ -65,4 +65,4 @@ const MovieDet = () => {
   );
 };
 
-export default MovieDet;
+export default MovieDetails;
