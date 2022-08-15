@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 
-const TrandList = ({ data, isHome }) => {
+const List = ({ data, isHome }) => {
   const location = useLocation();
   const url = isHome ? 'movies/' : '';
 
@@ -19,9 +19,9 @@ const TrandList = ({ data, isHome }) => {
   );
 };
 
-export default TrandList;
+export default List;
 
-TrandList.propTypes = {
+List.propTypes = {
   data: PropTypes.array.isRequired,
   isHome: PropTypes.bool,
 };

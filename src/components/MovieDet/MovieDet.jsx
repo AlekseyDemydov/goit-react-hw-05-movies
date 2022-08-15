@@ -13,13 +13,13 @@ import DetailsMovie from '../DetailsMovie/DetailsMovie';
 import Component from '../Component/Component';
 
 const MovieDet = () => {
-  const [data, setData] = useState({});
-  const { movieId } = useParams();
   const locRef = useRef(null);
   const location = useLocation();
+  locRef.current = location.state?.from ?? '/';
+  const [data, setData] = useState({});
+  const { movieId } = useParams();
   useEffect(() => {
     const dataConversion = obj => {
-      locRef.current = location.state?.from ?? '/';
       const genres = obj.genres.map(genre => genre.name).join(', ');
       const year = obj['release_date'].split('-')[0];
       const score = Math.ceil(obj['vote_average'] * 10);

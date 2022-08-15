@@ -1,5 +1,4 @@
 const DetailsMovie = ({ data }) => {
-  console.log(data);
   return (
     <div>
       <img src={data.img} alt={data.title} height="300" width="200" />

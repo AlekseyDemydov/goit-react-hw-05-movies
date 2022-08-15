@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Component from '../Component/Component';
-import TrandList from '../TrandList/TrandList';
+import List from '../List/List';
 import api from '../../api/api';
 
 const Home = () => {
@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <Component>
       <h1>Trending today</h1>
-      <TrandList data={data} isHome={true} />
+      <List data={data} isHome={true} />
     </Component>
   );
 };
