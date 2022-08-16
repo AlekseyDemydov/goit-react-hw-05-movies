@@ -14,12 +14,11 @@ const Home = () => {
         setData(response);
       } catch (error) {
         console.log(error);
-
         setPage(1);
       }
     };
     fetch();
-  });
+  }, [page]);
   return (
     <Component>
       <h1>Trending today</h1>

@@ -43,7 +43,7 @@ const MovieDetails = () => {
       }
     };
     fetch();
-  });
+  }, [movieId]);
 
   return (
     <Component>
