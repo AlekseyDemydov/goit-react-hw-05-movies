@@ -2,15 +2,14 @@ import { Link, useLocation } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 
-const List = ({ data, isHome }) => {
+const List = ({ data }) => {
   const location = useLocation();
-  const url = isHome ? 'movies/' : '';
 
   return (
     <ul>
       {data.map(el => (
         <li key={el.id}>
-          <Link to={`${url}${el.id}`} state={{ from: location }}>
+          <Link to={`/movies/${el.id}`} state={{ from: location }}>
             {el.title}
           </Link>
         </li>

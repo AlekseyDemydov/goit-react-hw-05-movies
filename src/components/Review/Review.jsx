@@ -18,7 +18,7 @@ const Reviews = () => {
       }
     };
     fetch();
-  });
+  }, [movieId]);
 
   if (data.length === 0) return <p>We don't have any reviews for this movie</p>;
   if (data.length !== 0) {

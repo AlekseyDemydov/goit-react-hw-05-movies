@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import s from './Movies.module.css';
-import api from '../../../api/api';
-import SearchForm from '../../SearchForm/SearchForm';
-import List from '../../List/List';
+import api from '../../api/api';
+import SearchForm from '../../components/SearchForm/SearchForm';
+import List from '../../components/List/List';
 
 import Component from 'components/Component/Component';
 

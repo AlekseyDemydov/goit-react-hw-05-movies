@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import Component from '../../Component/Component';
-import List from '../../List/List';
-import api from '../../../api/api';
+import Component from '../../components/Component/Component';
+import List from '../../components/List/List';
+import api from '../../api/api';
 
 const Home = () => {
   const [data, setData] = useState([]);

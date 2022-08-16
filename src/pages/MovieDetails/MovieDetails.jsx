@@ -1,21 +1,20 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import {
-  Link,
   NavLink,
   Outlet,
   useLocation,
   useParams,
+  useNavigate,
 } from 'react-router-dom';
 
 import api from '../../api/api';
 
-import DetailsMovie from '../DetailsMovie/DetailsMovie';
-import Component from '../Component/Component';
+import DetailsMovie from '../../components/DetailsMovie/DetailsMovie';
+import Component from '../../components/Component/Component';
 
 const MovieDetails = () => {
-  const locRef = useRef(null);
   const location = useLocation();
-  locRef.current = location.state?.from ?? '/';
+  const navBtn = useNavigate();
   const [data, setData] = useState({});
   const { movieId } = useParams();
   useEffect(() => {
@@ -47,7 +46,9 @@ const MovieDetails = () => {
 
   return (
     <Component>
-      <Link to={locRef.current}>{`<--Go to back`}</Link>
+      <button type="button" onClick={() => navBtn(location.state ?? '/')}>
+        Go to back
+      </button>
       <DetailsMovie data={data} />
       <div>
         <h3>Additional information</h3>
