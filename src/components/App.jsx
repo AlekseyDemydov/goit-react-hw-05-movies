@@ -1,6 +1,6 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-import AppBar from '../AppBar/AppBar';
+// import AppBar from '../AppBar/AppBar';
 
 // import Component from './Component/Component';
 // import Home from './Home/Home';
@@ -10,6 +10,7 @@ import AppBar from '../AppBar/AppBar';
 // import Reviews from './Review/Review';
 
 // const Component = lazy(() => import('./Component/Component'));
+const AppBar = lazy(() => import('../AppBar/AppBar'));
 const Movies = lazy(() => import('./Movies/Movies'));
 const Home = lazy(() => import('./Home/Home'));
 const MovieDetails = lazy(() => import('./MovieDetails/MovieDetails'));
@@ -28,9 +29,22 @@ export const App = () => {
           <Route path="cast" element={<Cast />} />
           <Route path="reviews" element={<Reviews />} />
         </Route>
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
 
       {/* </Component> */}
     </Suspense>
   );
 };
+
+// {/* <Routes>
+//   <Route path="/" element={<SharedLayout />}>
+//     <Route index element={<Home />} />
+//     <Route path="movies" element={<Movies />} />
+//     <Route path="movies/:movieId" element={<MovieDetails />}>
+//       <Route path="cast" element={<Cast />} />
+//       <Route path="reviews" element={<Reviews />} />
+//     </Route>
+//     <Route path="*" element={<Navigate to="/" />} />
+//   </Route>
+// </Routes>; */}
