@@ -10,9 +10,9 @@ import { lazy, Suspense } from 'react';
 // import Reviews from './Review/Review';
 
 // const Component = lazy(() => import('./Component/Component'));
-const AppBar = lazy(() => import('../AppBar/AppBar'));
-const Movies = lazy(() => import('./Movies/Movies'));
-const Home = lazy(() => import('./Home/Home'));
+const AppBar = lazy(() => import('./AppBar/AppBar'));
+const Movies = lazy(() => import('./pages/Movies/Movies'));
+const Home = lazy(() => import('./pages/Home/Home'));
 const MovieDetails = lazy(() => import('./MovieDetails/MovieDetails'));
 const Cast = lazy(() => import('./Cast/Cast'));
 const Reviews = lazy(() => import('./Review/Review'));
