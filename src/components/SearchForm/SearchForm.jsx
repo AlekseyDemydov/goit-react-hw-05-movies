@@ -3,7 +3,7 @@ import api from '../../api/api';
 import s from './SearchForm.module.css';
 import PropTypes from 'prop-types';
 
-const FormSearch = ({ setStatusPage, setData, setSearchParams }) => {
+const FormSearch = ({ setData, setSearchParams }) => {
   const [query, setQuery] = useState('');
 
   const handleChangeInput = e => {
