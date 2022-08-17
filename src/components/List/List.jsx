@@ -9,7 +9,7 @@ const List = ({ data }) => {
     <ul>
       {data.map(el => (
         <li key={el.id}>
-          <Link to={`/movies/${el.id}`} state={{ from: location }}>
+          <Link to={`/movies/${el.id}`} state={location}>
             {el.title}
           </Link>
         </li>

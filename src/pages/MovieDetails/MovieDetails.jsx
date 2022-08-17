@@ -15,6 +15,7 @@ import Component from '../../components/Component/Component';
 const MovieDetails = () => {
   const location = useLocation();
   const navBtn = useNavigate();
+  console.log(location.state);
   const [data, setData] = useState({});
   const { movieId } = useParams();
   useEffect(() => {
@@ -54,10 +55,14 @@ const MovieDetails = () => {
         <h3>Additional information</h3>
         <ul>
           <li>
-            <NavLink to={'cast'}>Cast</NavLink>
+            <NavLink to={'cast'} state={location.state}>
+              Cast
+            </NavLink>
           </li>
           <li>
-            <NavLink to={'reviews'}>Reviews</NavLink>
+            <NavLink to={'reviews'} state={location.state}>
+              Reviews
+            </NavLink>
           </li>
         </ul>
       </div>
